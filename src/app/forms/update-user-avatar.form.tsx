@@ -38,7 +38,7 @@ const UpdateUserAvatarForm = () => {
             disabled={loadingUpdateUserDataById}
           />
           <Button 
-            isLoading={!!selectedFile && loadingUpdateUserDataById}
+            isLoading={!selectedFile && loadingUpdateUserDataById}
             size="md" 
             color="default" 
             variant="bordered" 

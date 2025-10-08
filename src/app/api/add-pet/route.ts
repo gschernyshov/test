@@ -39,7 +39,7 @@ export async function POST(req: Request): Promise<NextResponse<CreatePetResponse
     
     const data = await petSchema.parseAsync(formObj)
 
-    let pet = await prisma.pet.create({
+    const pet = await prisma.pet.create({
       data: {
         ...data,
         photo: "",
