@@ -5,7 +5,7 @@ import { Alert, Button } from "@heroui/react"
 
 const NotFound = () => {
   return (
-    <div className="flex justify-center items-start w-full px-20 pt-40" style={{ minHeight: "calc(100vh - 10rem)" }}>
+    <div className="flex justify-center items-center h-[calc(100vh-2.5rem)] md:h-[calc(100vh-10rem)] w-full pt-20 md:pt-40 px-4 md:px-20">
       <div>
         <Alert
           color="danger"

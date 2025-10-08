@@ -40,7 +40,7 @@ const PetsPage = () => {
 
   if (petsData === undefined) {
     return (
-      <div className="flex justify-center items-center h-[calc(100vh-2.5rem)] md:h-[calc(100vh-10rem)] w-full pt-20 md:pt-40 px-4 md:px-20">
+      <div className="flex justify-center items-start h-[calc(100vh-2.5rem)] md:h-[calc(100vh-10rem)] w-full">
         <Spinner color="primary" size="lg" variant="gradient" />
       </div>
     )
@@ -49,7 +49,7 @@ const PetsPage = () => {
   if (petsData === null) {
     return (
       <div className="flex justify-center items-center h-[calc(100vh-2.5rem)] md:h-[calc(100vh-10rem)] w-full pt-20 md:pt-40 px-4 md:px-20">
-        <h2 className="text-3xl md:text-4xl text-center md:text-left leading-9 md:leading-12 font-bold">Питомцев пока нет 😿</h2>
+        <h2 className="text-3xl md:text-4xl text-center leading-9 md:leading-12 font-bold">Питомцев пока нет 😿</h2>
       </div>
     )
   }
@@ -61,14 +61,14 @@ const PetsPage = () => {
       </div>
       <div className="flex flex-col md:flex-row flex-wrap gap-5 w-full">
         {petsData.map((petData) => (
-          <div key={petData.id} className="flex flex-col md:flex-row gap-2 md:gap-7 p-3 w-full md:w-[calc(50%-2.5rem)] bg-white rounded-xl shadow-[0_0_5px_rgba(0,0,0,0.1)]">
+          <div key={petData.id} className="flex flex-col md:flex-row gap-2 md:gap-7 w-full md:w-[calc(50%-2.5rem)] p-3 bg-white rounded-xl shadow-[0_0_5px_rgba(0,0,0,0.1)]">
             <div className="w-full md:w-2/5">
               <Image
                 src={petData.photo || "/avatars/base.jpg"}
                 alt={`Фотография ${petData.species}`}   
                 height={750}
                 width={750}    
-                className="object-cover h-full w-full max-h-65 rounded-xl"
+                className="h-full max-h-65 w-full object-cover rounded-xl"
               />
             </div>
             <div className="flex flex-col justify-between gap-10 w-full md:w-3/5 pt-2 ">

@@ -47,7 +47,7 @@ const PetPage = ({ params }: { params: Promise<{ id: string }> }) => {
 
  if (petData === undefined || status === "loading") {
     return (
-      <div className="flex justify-center items-center h-[calc(100vh-2.5rem)] md:h-[calc(100vh-10rem)] w-full pt-20 md:pt-40 px-4 md:px-20">
+      <div className="flex justify-center items-start h-[calc(100vh-2.5rem)] md:h-[calc(100vh-10rem)] w-full">
         <Spinner color="primary" size="lg" variant="gradient" />
       </div>
     )
@@ -56,7 +56,7 @@ const PetPage = ({ params }: { params: Promise<{ id: string }> }) => {
   if (petData === null) {
     return (
       <div className="flex flex-col justify-center items-center h-[calc(100vh-2.5rem)] md:h-[calc(100vh-10rem)] w-full pt-20 md:pt-40 px-4 md:px-20">
-        <h1 className="text-3xl md:text-4xl text-center md:text-left leading-9 md:leading-12 font-bold">К сожалению, данная анкета<br className="hidden md:block"/>больше недоступна <br className="block md:hidden"/>:(</h1>
+        <h1 className="text-3xl md:text-4xl text-center leading-9 md:leading-12 font-bold">К сожалению, данная анкета<br className="hidden md:block"/>больше недоступна<br className="block md:hidden"/>:(</h1>
         <Image
           src={petNotFound}
           alt="Фотография кота"  
@@ -70,7 +70,7 @@ const PetPage = ({ params }: { params: Promise<{ id: string }> }) => {
   return (
    <div className="flex flex-col justify-start items-start gap-7 md:gap-10 min-h-[calc(100vh-2.5rem)] md:min-h-[calc(100vh-10rem)] w-full pt-20 md:pt-40 px-4 md:px-20">
       <div className="flex flex-col gap-7 md:gap-10">
-        <h2 className="text-3xl md:text-4xl text-center md:text-left leading-9 md:leading-12 font-bold">Анкеты питомца</h2>
+        <h2 className="text-3xl md:text-4xl text-center md:text-left leading-9 md:leading-12 font-bold">Анкета питомца</h2>
       </div>
       <div className="flex flex-col md:flex-row md:gap-12 p-7 bg-white rounded-4xl shadow-[0_0_5px_rgba(0,0,0,0.1)]">
         <div className="w-full md:w-1/2">
@@ -79,19 +79,20 @@ const PetPage = ({ params }: { params: Promise<{ id: string }> }) => {
             alt={`Фотография ${petData.species}`}   
             height={750}
             width={750}    
-            className="object-cover h-full w-full max-h-120 rounded-2xl"
+            className="h-full w-full max-h-120 object-cover rounded-2xl"
           />
         </div>
         <div className="flex flex-col justify-between gap-20 w-full md:w-1/2 pt-5 ">
-          <div className="flex flex-col gap-3">
-            <h1 className="text-3xl md:text-4xl md:text-left leading-9 md:leading-12 font-bold">{petData.species} из г. {petData.nameCity}<span className="text-base text-gray-500"><br />(н. п. {petData.location})</span><br />ищет себе дом</h1>
-            <div className="flex flex-col gap-2">
-              <p>{petData.description}</p>
-              <div className="flex gap-2">
+          <div className="flex flex-col gap-4">
+            <h2 className="text-3xl md:text-4xl text-left leading-9 md:leading-12 font-bold">{petData.species} из г. {petData.nameCity}<br /><span className="text-base text-gray-500 leading-none">(н. п. {petData.location})</span><br />ищет себе дом 🏠</h2>
+            <div className="flex flex-col gap-4">
+              <div className="flex gap-1">
                 <Chip color="warning" variant="bordered">{petData.species}</Chip>
                 <Chip color="warning" variant="bordered">{petData.gender}</Chip>
                 <Chip color="warning" variant="bordered">{petData.age} мес.</Chip>
               </div>
+              <p>{petData.description}</p>
+              <p className="text-sm text-gray-400">{new Date(petData.createdAt).toLocaleDateString()}</p>
             </div>
           </div>
           {!isAuth ? (

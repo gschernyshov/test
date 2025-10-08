@@ -55,9 +55,9 @@ const Account = () => {
               Профиль
             </BreadcrumbItem>
           </Breadcrumbs>
-          <div className="flex flex-col md:flex-row items-start gap-5 md:gap-10 w-full">
-            <div className="flex flex-col gap-6 md:gap-12 w-full md:w-1/2 max-w-[500px] p-5 md:p-10 bg-blue-50 rounded-4xl">
-              <h2 className="text-3xl md:text-4xl md:text-left leading-9 md:leading-12 font-bold">Привет, {userData.name}
+          <div className="flex flex-col md:flex-row items-start gap-7 md:gap-10 w-full">
+            <div className="flex flex-col gap-7 md:gap-10 w-full md:w-1/2 max-w-[500px] p-5 md:p-10 bg-blue-50 rounded-4xl">
+              <h2 className="text-3xl md:text-4xl leading-9 md:leading-12 font-bold">Привет, {userData.name}
                 <span aria-label="emoji" className="ml-2" role="img">
                   👋
                 </span>

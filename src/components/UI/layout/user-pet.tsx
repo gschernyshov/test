@@ -16,7 +16,7 @@ const UserPet = ({ pet }: IUserPetProps) => {
           alt={`Фотография ${pet.species}`}   
           height={750}
           width={750}    
-          className="object-cover h-full w-full max-h-65 rounded-xl"
+          className="h-full w-full max-h-65 object-cover rounded-xl"
         />
       </div>
       <div className="flex flex-col justify-between gap-10 w-full md:w-3/5 pt-2 ">
