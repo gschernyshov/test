@@ -40,12 +40,12 @@ const CustomModal = ({ isOpen, onClose, size = "md", children }: IProps) => {
       size={isMobile ? "full" : size}
       classNames={{
         base: isMobile
-          ? "fixed inset-0 w-screen h-screen rounded-none overflow-y-auto pt-20 px-4"
-          : "fixed inset-0 max-w-sm max-h-[90vh] overflow-y-auto py-10 px-5 m-auto rounded-lg",
+          ? "fixed inset-0 flex h-screen w-screen rounded-none"
+          : "max-h-[98vh] max-w-sm rounded-3xl",
         closeButton: isMobile
-          ? "absolute top-4 right-4 z-50 p-2 text-2xl text-gray-500 hover:text-black"
-          : "absolute top-2 right-2 z-50 p-2 text-lg text-gray-500 hover:text-black",
-        body: "overflow-y-auto max-h-full",
+          ? "m-4 p-2 text-2xl text-gray-500 hover:text-black"
+          : "m-2 p-2 text-lg text-gray-500 hover:text-black",
+        body: "p-10 overflow-y-auto",
       }}
     >
       <ModalContent>
