@@ -46,7 +46,7 @@ const UserPets = () => {
   if (userPets === undefined) {
     return (      
       <div className="flex flex-col gap-5 p-5">
-        <h2 className="text-3xl leading-12 font-bold">Ваши анкеты</h2>
+        <h2 className="text-3xl md:text-4xl md:text-left leading-9 md:leading-12 font-bold">Ваши анкеты</h2>
         <CircularProgress />
       </div>
     )
@@ -55,7 +55,7 @@ const UserPets = () => {
   if (userPets === null) {
     return (
       <div className="flex flex-col gap-5 p-5">
-        <h2 className="text-3xl leading-12 font-bold">Ваши анкеты</h2>
+        <h2 className="text-3xl md:text-4xl md:text-left leading-9 md:leading-12 font-bold">Ваши анкеты</h2>
         <p>На данный момент у вас нет добавленных анкет. <Link className="text-blue-500" href="/add-pet">Хотите добавить?</Link></p>
       </div>
     )
@@ -63,7 +63,7 @@ const UserPets = () => {
 
   return (
     <div className="flex flex-col gap-5 p-5">
-      <h2 className="text-3xl leading-12 font-bold">Ваши анкеты</h2>
+      <h2 className="text-3xl md:text-4xl md:text-left leading-9 md:leading-12 font-bold">Ваши анкеты</h2>
       <div className="flex flex-col gap-5">
         {userPets.map((pet) => <UserPet key={pet.id} pet={pet} />)}
       </div>

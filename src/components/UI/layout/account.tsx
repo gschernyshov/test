@@ -25,7 +25,7 @@ const Account = () => {
 
   if (status === 'loading') {
     return (
-      <div className="flex justify-center items-start h-[calc(100vh-10rem)] w-full px-20 pt-40">
+      <div className="flex justify-center items-start h-[calc(100vh-2.5rem)] md:h-[calc(100vh-10rem)] w-full pt-20 md:pt-40 px-4 md:px-20">
         <Skeleton/>
       </div>
     )
@@ -33,7 +33,7 @@ const Account = () => {
 
   if (!isAuth) {
     return ( 
-      <div className="flex justify-center items-start h-[calc(100vh-10rem)] w-full px-20 pt-40">
+      <div className="flex justify-center items-center h-[calc(100vh-2.5rem)] md:h-[calc(100vh-10rem)] w-full pt-20 md:pt-40 px-4 md:px-20">
         <div>
           <Alert error={true} message="Данная страница доступна только для авторизованных пользователей!" />
         </div>
@@ -42,7 +42,7 @@ const Account = () => {
   }
 
   return (
-    <div className="min-h-[calc(100vh-10rem)] w-full px-4 md:px-20 pt-30 md:pt-40">
+     <div className="flex justify-center items-start min-h-[calc(100vh-2.5rem)] md:min-h-[calc(100vh-10rem)] w-full pt-20 md:pt-40 px-4 md:px-20">
       {userData ? (
         <div className="w-full">
           <Breadcrumbs className="mb-5 md:mb-10">
@@ -57,7 +57,7 @@ const Account = () => {
           </Breadcrumbs>
           <div className="flex flex-col md:flex-row items-start gap-5 md:gap-10 w-full">
             <div className="flex flex-col gap-6 md:gap-12 w-full md:w-1/2 max-w-[500px] p-5 md:p-10 bg-blue-50 rounded-4xl">
-              <h2 className="text-3xl leading-12 font-bold">Привет, {userData.name}
+              <h2 className="text-3xl md:text-4xl md:text-left leading-9 md:leading-12 font-bold">Привет, {userData.name}
                 <span aria-label="emoji" className="ml-2" role="img">
                   👋
                 </span>

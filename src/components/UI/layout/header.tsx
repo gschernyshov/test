@@ -128,7 +128,7 @@ const Header = (props: NavbarProps) => {
                 </Button>
                 <Button
                   className="bg-foreground text-background font-medium"
-                  color="secondary"
+                  color="primary"
                   endContent={<Icon icon="solar:alt-arrow-right-linear" />}
                   radius="full"
                   variant="flat"
@@ -149,7 +149,7 @@ const Header = (props: NavbarProps) => {
                 </Button>
                 <Button
                   className="bg-foreground text-background font-medium"
-                  color="secondary"
+                  color="primary"
                   endContent={<Icon icon="solar:alt-arrow-right-linear" />}
                   radius="full"
                   variant="flat"
@@ -191,7 +191,7 @@ const Header = (props: NavbarProps) => {
               <NavbarMenuItem className="mb-4">
                 <Button 
                   fullWidth 
-                  className="bg-foreground text-background" 
+                  color="primary"
                   onPress={() => {
                     setIsMenuOpen(false)
                     setIsRegistrationOpen(true)
@@ -219,7 +219,7 @@ const Header = (props: NavbarProps) => {
               <NavbarMenuItem className="mb-4">
                 <Button 
                   fullWidth 
-                  className="bg-foreground text-background" 
+                  color="primary"
                   onPress={handleSignOut}
                 >
                   Выйти
