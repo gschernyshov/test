@@ -79,7 +79,7 @@ const Header = (props: NavbarProps) => {
     <Navbar
       {...props}
       classNames={{
-        base: cn("border-default-100 h-[60px] md:h-[100px]", {
+        base: cn("border-default-100 h-[65px] md:h-[100px]", {
           "bg-default-200/50 dark:bg-default-100/50": isMenuOpen,
         }),
         wrapper: "w-full justify-between",
