@@ -1,24 +1,27 @@
 "use client"
 
-import { redirect } from "next/navigation"
+
+import { useRouter } from 'next/navigation'
 import { Alert, Button } from "@heroui/react"
 
 const NotFound = () => {
+  const router = useRouter()
+
   return (
-    <div className="flex justify-center items-center h-[calc(100vh-2.5rem)] md:h-[calc(100vh-10rem)] w-full pt-20 md:pt-40 px-4 md:px-20">
-      <div>
+    <div className="flex justify-center items-center h-[calc(100vh-2.5rem)] md:h-[calc(100vh-10rem)] w-full px-4 md:px-20">
+      <div className="w-full">
         <Alert
           color="danger"
-          className="w-2xl"
+          className="w-full md:w-2xl"
           endContent={
             <Button 
               color="danger"  
               size="sm" 
               variant="flat"
-              onPress={() => redirect("/")}
+              onClick={() => router.push("/")}
             >
               Главная
-            </Button>
+            </Button> 
           }
           title="Страница не найдена!"
           variant="faded"

@@ -1,7 +1,7 @@
 "use client"
 
 import React from 'react'
-import {  useRouter } from 'next/navigation'
+import { useRouter } from 'next/navigation'
 import { BreadcrumbItem, Breadcrumbs } from '@heroui/react'
 import { useAuthStore } from '@/store/auth.store'
 import { useAccount } from '@/context/account.context'
@@ -33,7 +33,7 @@ const Account = () => {
 
   if (!isAuth) {
     return ( 
-      <div className="flex justify-center items-center h-[calc(100vh-2.5rem)] md:h-[calc(100vh-10rem)] w-full pt-20 md:pt-40 px-4 md:px-20">
+      <div className="flex justify-center items-center h-[calc(100vh-2.5rem)] md:h-[calc(100vh-10rem)] w-full px-4 md:px-20">
         <div>
           <Alert error={true} message="Данная страница доступна только для авторизованных пользователей!" />
         </div>

@@ -40,7 +40,7 @@ const PetsPage = () => {
 
   if (petsData === undefined) {
     return (
-      <div className="flex justify-center items-start h-[calc(100vh-2.5rem)] md:h-[calc(100vh-10rem)] w-full">
+      <div className="flex justify-center items-center h-[calc(100vh-2.5rem)] md:h-[calc(100vh-10rem)] w-full">
         <Spinner color="primary" size="lg" variant="gradient" />
       </div>
     )
@@ -48,7 +48,7 @@ const PetsPage = () => {
 
   if (petsData === null) {
     return (
-      <div className="flex justify-center items-center h-[calc(100vh-2.5rem)] md:h-[calc(100vh-10rem)] w-full pt-20 md:pt-40 px-4 md:px-20">
+      <div className="flex justify-center items-center h-[calc(100vh-2.5rem)] md:h-[calc(100vh-10rem)] w-full px-4 md:px-20">
         <h2 className="text-3xl md:text-4xl text-center leading-9 md:leading-12 font-bold">Питомцев пока нет 😿</h2>
       </div>
     )

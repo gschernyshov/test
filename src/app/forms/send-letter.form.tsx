@@ -72,8 +72,6 @@ const SendLetterForm = ({ userId }: ISendLetterFormProps) => {
           isDisabled={loadingSendLetter}
         />
 
-        {action.message && <Alert error={action.error} message={action.message} />}
-
         <Button 
           isIconOnly 
           aria-label="Send" 
@@ -87,6 +85,7 @@ const SendLetterForm = ({ userId }: ISendLetterFormProps) => {
           <Icon icon="gravity-ui:arrow-shape-turn-up-right" height="14" width="14" />
         </Button>
       </div>
+      {action.message && <Alert error={action.error} message={action.message} />}
     </form>
   )
 }
