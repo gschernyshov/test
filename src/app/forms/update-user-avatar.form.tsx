@@ -17,7 +17,7 @@ const UpdateUserAvatarForm = () => {
     <div className="flex gap-5 items-center">
       <Avatar
         className="w-33 md:w-40 h-33 md:h-40 text-large border-5 border-neutral-50"
-        src={userData!!.avatar}
+        src={userData!.avatar}
       />
       <div className="flex flex-col gap-1 w-1/2">
         <div className="flex items-center gap-1">
