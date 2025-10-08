@@ -28,7 +28,7 @@ const Faq = () => {
                       duration: 1,
                     },
                     opacity: {
-                      easings: "ease",
+                      ease: "easeInOut", // или просто "ease"
                       duration: 1,
                     },
                   },
@@ -40,11 +40,11 @@ const Faq = () => {
                   overflowY: "hidden",
                   transition: {
                     height: {
-                      easings: "ease",
+                      ease: "easeInOut",
                       duration: 0.25,
                     },
                     opacity: {
-                      easings: "ease",
+                      ease: "easeInOut",
                       duration: 0.3,
                     },
                   },
