@@ -42,7 +42,9 @@ const CustomModal = ({ isOpen, onClose, size = "md", children }: IProps) => {
         base: isMobile
           ? "relative h-screen w-screen rounded-none overflow-y-auto py-4 px-4" 
           : "relative max-w-sm max-h-[90vh] overflow-y-auto py-10 px-5",        
-        closeButton: `absolute text-gray-500 hover:text-black top-0 right-0 ${isMobile ? "top-4 m-4 p-2 text-2xl" : "top-2 m-2 p-2 text-lg"}`,     
+        closeButton: isMobile
+          ? "absolute top-4 right-4 z-50 m-4 p-2 text-2xl text-gray-500 hover:text-black"
+          : "absolute top-2 right-2 z-50 p-2 text-lg text-gray-500 hover:text-black",
         body: "overflow-y-auto",
       }}
     >
