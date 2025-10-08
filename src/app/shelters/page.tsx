@@ -48,10 +48,10 @@ const Shelters = () => {
   
   return (
     <>
-      <div className="flex flex-col items-center w-full px-20 pt-40">
-        <div className="flex flex-col gap-3 mb-7">
-          <h1 className="text-4xl leading-12 font-bold text-center">Список приютов для животных в вашем городе</h1>
-          <div className="flex justify-center gap-1">
+      <div className="flex flex-col justify-start items-start gap-7 md:gap-10 w-full pt-20 md:pt-40 px-4 md:px-20">
+        <div className="flex flex-col justify-center items-center w-full gap-3 md:mb-7">
+          <h1 className="text-3xl md:text-4xl text-center md:text-left leading-9 md:leading-12 font-bold">Список приютов для животных в вашем городе</h1>
+          <div className="flex flex-wrap justify-center items-center gap-1">
             <p>Вы можете легко</p>
             <span 
               className="text-blue-500 border-b-1 border-blue-500 cursor-pointer" 
@@ -59,10 +59,10 @@ const Shelters = () => {
             >
               добавить
             </span>
-            <p> новый приют и помочь животным найти заботу!</p>
+            <p className="text-center"> новый приют и помочь животным найти заботу!</p>
           </div>
         </div>
-        <div className="flex gap-2 mb-10">
+        <div className="flex justify-center items-center gap-2 w-full md:mb-10">
           {cities === null ? (
             <div className="flex items-center gap-2">
               <Button 

@@ -4,7 +4,7 @@ export const siteConfig = {
   menu: [
     { href: "/pets", label: "Анкеты"},
     { href: "/add-pet", label: "Создать анкету"},
-    { href: "/help", label: "Как помочь"},
+    { href: "/shelters", label: "Приюты"},
     { href: "/about", label: "О нас"},
     { href: "/contacts", label: "Контакты"},
   ],

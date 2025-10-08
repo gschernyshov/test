@@ -59,7 +59,7 @@ const PetsPage = () => {
       <div className="flex flex-col gap-7 md:gap-10">
         <h2 className="text-3xl md:text-4xl text-center md:text-left leading-9 md:leading-12 font-bold">Анкеты питомцев</h2>
       </div>
-      <div className="flex flex-col md:flex-row flex-wrap gap-5">
+      <div className="flex flex-col md:flex-row flex-wrap gap-5 w-full">
         {petsData.map((petData) => (
           <div key={petData.id} className="flex flex-col md:flex-row gap-2 md:gap-7 p-3 w-full md:w-[calc(50%-2.5rem)] bg-white rounded-xl shadow-[0_0_5px_rgba(0,0,0,0.1)]">
             <div className="w-full md:w-2/5">
