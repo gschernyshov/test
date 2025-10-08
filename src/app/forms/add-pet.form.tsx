@@ -96,9 +96,9 @@ const AddPetForm = () => {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col items-start gap-6 py-2">
-      <div className="flex flex-col items-center gap-2">
-        <h2 className="text-3xl md:text-4xl leading-9 md:leading-12 font-bold">Введите данные</h2>
+    <form onSubmit={handleSubmit} className="flex flex-col items-start gap-6">
+      <div className="flex flex-col items-center gap-1">
+        <h2 className="text-3xl text-center leading-12 font-bold">Введите данные</h2>
         <p className="text-sm text-center text-gray-500">Пожалуйста, указывайте только достоверные данные о питомце. Информация будет опубликована в открытом доступе, чтобы помочь людям найти и забрать животное</p>
       </div>
 
@@ -131,7 +131,6 @@ const AddPetForm = () => {
           <Avatar src={preview} className="w-60 h-60 object-cover border-5 border-blue-500" />
         )}
       </div>
-
       <Select 
         isRequired
         label="Выберите город" 
@@ -146,7 +145,6 @@ const AddPetForm = () => {
       >
         {cities.map((citie) => <SelectItem key={citie.key}>{citie.label}</SelectItem> )}
       </Select>
-
       <Input
         isRequired
         label="Населённый пункт"
@@ -159,7 +157,6 @@ const AddPetForm = () => {
         onChange={handleChange}
         isDisabled={loadingAddPet}
       />
-
       <Select
         isRequired
         label="Вид"
@@ -175,7 +172,6 @@ const AddPetForm = () => {
         <SelectItem key="Собака">Собака</SelectItem>
         <SelectItem key="Другое">Другое</SelectItem>
       </Select>
-
       <RadioGroup
         isRequired
         label="Пол животного"
@@ -187,7 +183,6 @@ const AddPetForm = () => {
         <Radio value="Самка">Самка</Radio>
         <Radio value="Самец">Самец</Radio>
       </RadioGroup>
-
       <div className="w-full">
         <Slider
           label="Возраст (в месяцах)"
@@ -201,7 +196,6 @@ const AddPetForm = () => {
         />
         <p className="text-sm text-gray-500 mt-1">Выбранный возраст: {formData.age} мес.</p>
       </div>
-
       <Textarea
         isRequired
         label="Описание"
@@ -213,7 +207,7 @@ const AddPetForm = () => {
         onChange={handleChange}
         isDisabled={loadingAddPet}
       />
-
+      
       {action.message && <Alert error={action.error} message={action.message} />}
 
       <Button 

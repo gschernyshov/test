@@ -52,9 +52,9 @@ const LoginForm = ({ onClose }: IProps) => {
 
   return (
     <div className="flex justify-center items-center h-full w-full">
-      <div className="flex flex-col gap-4 w-full max-w-sm pt-6 pb-10 px-8 rounded-large">
+      <div className="flex flex-col gap-4 w-full max-w-sm">
         <p className="pb-4 text-left text-3xl font-semibold">
-          Войти
+          Вход
           <span aria-label="emoji" className="ml-2" role="img">
             👋
           </span>
@@ -104,7 +104,7 @@ const LoginForm = ({ onClose }: IProps) => {
             onChange={handleChange}
             isDisabled={loadingLogin}
           />
-          <div className="flex justify-between items-center w-full  py-2 px-1">
+          <div className="flex justify-between items-center w-full y-2 px-1">
             <Checkbox isRequired defaultSelected name="remember" size="sm" isDisabled={loadingLogin}>
               Запомнить меня
             </Checkbox>
@@ -114,6 +114,7 @@ const LoginForm = ({ onClose }: IProps) => {
               </span>
             </Link>
           </div>
+
           <Button
             isLoading={loadingLogin}
             className="w-full" 
@@ -124,6 +125,7 @@ const LoginForm = ({ onClose }: IProps) => {
             {!loadingLogin ? "Войти" : "Вход..."}
           </Button>
         </Form>
+        
         <p className="text-small text-center">
           <Link href="/registration">
             <span className="text-sm text-gray-500">

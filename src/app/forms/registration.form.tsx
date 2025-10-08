@@ -55,8 +55,8 @@ const RegistrationForm = ({ onClose }: IProps) =>  {
   }
 
   return (
-    <div className="flex justify-center items-center h-full w-full">
-      <div className="flex flex-col gap-4 w-full max-w-sm pt-6 pb-10 px-8 rounded-large ">
+   <div className="flex justify-center items-center h-full w-full">
+      <div className="flex flex-col gap-4 w-full max-w-sm">
         <p className="pb-4 text-left text-3xl font-semibold">
           Регистрация
           <span aria-label="emoji" className="ml-2" role="img">
@@ -170,6 +170,7 @@ const RegistrationForm = ({ onClose }: IProps) =>  {
               </span>
             </Link>
           </Checkbox>
+
           <Button 
             isLoading={loadingRegistration}
             color="primary" 
@@ -179,6 +180,7 @@ const RegistrationForm = ({ onClose }: IProps) =>  {
             {!loadingRegistration ? "Зарегистрироваться" : "Регистрация..."}
           </Button>
         </form>
+        
         <p className="text-small text-center">
           <Link href="/login">
             <span className="text-sm text-gray-500">

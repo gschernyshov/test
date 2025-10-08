@@ -64,7 +64,7 @@ const CreateShelterForm = ({ onClose }: IProps) =>  {
 
   return (
     <div className="flex justify-center items-center h-full w-full">
-      <div className="flex flex-col gap-4 w-full max-w-sm pt-6 pb-10 px-8 rounded-large">
+      <div className="flex flex-col gap-4 w-full max-w-sm">
         <p className="pb-4 text-left text-3xl font-semibold">
           Добавление нового приюта
           <span aria-label="emoji" className="ml-2" role="img">

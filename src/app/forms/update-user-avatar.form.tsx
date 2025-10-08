@@ -37,6 +37,7 @@ const UpdateUserAvatarForm = () => {
             onChange={handleFileChange}
             disabled={loadingUpdateUserDataById}
           />
+          
           <Button 
             isLoading={!selectedFile && loadingUpdateUserDataById}
             size="md" 

@@ -7,7 +7,7 @@ const Donate = () => {
   const router = useRouter()
 
   return (
-    <div className="flex flex-col md:flex-row items-center gap-10 md:gap-20 w-full px-4 md:px-20 pt-20 md:pt-40">
+    <div className="flex flex-col md:flex-row items-center gap-10 md:gap-20 w-full pt-20 md:pt-40 px-4 md:px-20">
       <div className="flex flex-col items-center md:items-start gap-7 md:gap-10 w-full md:w-1/2">
         <h2 className="text-3xl md:text-4xl text-center leading-9 md:leading-12 font-bold">Каждый рубль имеет значение</h2>
         <p className="text-center md:text-left">
@@ -28,7 +28,7 @@ const Donate = () => {
         <Image
           isBlurred
           alt="Фотография собаки"
-          className="w-full"
+          sizes="100vw"
           src='/donate.png'
         />
       </div>

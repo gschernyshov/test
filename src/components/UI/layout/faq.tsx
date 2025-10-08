@@ -8,7 +8,7 @@ import Photo from '@/assets/photo/paws.png'
 const Faq = () => {
   const faq = siteConfig.faq
   return (
-    <div className="flex flex-col gap-10 w-full px-4 md:px-20 pt-20 md:pt-40">
+    <div className="flex flex-col gap-10 w-full pt-20 md:pt-40 px-4 md:px-20">
       <h2 className="text-3xl md:text-6xl leading-9 md:leading-12 font-bold">FAQ</h2>
       <div className="flex flex-col md:flex-row items-end gap-10 md:gap-20">
         <div className="w-full md:w-2/3 max-w-3xl p-5 md:p-10 bg-transparent-blue rounded-4xl">
@@ -28,7 +28,7 @@ const Faq = () => {
                       duration: 1,
                     },
                     opacity: {
-                      ease: "easeInOut", // или просто "ease"
+                      ease: "easeInOut",
                       duration: 1,
                     },
                   },
