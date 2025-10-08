@@ -56,7 +56,7 @@ const PetPage = ({ params }: { params: Promise<{ id: string }> }) => {
   if (petData === null) {
     return (
       <div className="flex flex-col justify-center items-center h-[calc(100vh-2.5rem)] md:h-[calc(100vh-10rem)] w-full pt-20 md:pt-40 px-4 md:px-20">
-        <h1 className="text-3xl md:text-4xl text-center leading-9 md:leading-12 font-bold">К сожалению, данная анкета<br className="hidden md:block"/>больше недоступна<br className="block md:hidden"/>:(</h1>
+        <h1 className="text-3xl md:text-4xl text-center leading-9 md:leading-12 font-bold">К сожалению, данная анкета<br className="hidden md:block"/> больше недоступна<br className="block md:hidden"/>:(</h1>
         <Image
           src={petNotFound}
           alt="Фотография кота"  
