@@ -2,8 +2,8 @@
 
 import { useEffect, useState } from "react"
 import Link from "next/link"
-import { Icon } from "@iconify/react"
 import { Spinner } from "@heroui/react"
+import { Icon } from "@iconify/react"
 import { siteConfig } from "@/config/site.config"
 import PhotoBg from "@/assets/photo/contacts.jpg"
 import PhotoTwoBg from "@/assets/photo/contacts-2.jpg"
@@ -19,9 +19,18 @@ const ContactsPage = () => {
     script.async = true
 
     script.onload = () => setMapLoaded(true)
+    script.onerror = () => {
+      // console.error("При загрузке карты возникла ошибка!")
+      setMapLoaded(true)
+    }
 
     const mapContainer = document.getElementById("yandex-map")
     if (mapContainer) mapContainer.appendChild(script)
+
+    return () => {
+      if (mapContainer) mapContainer.innerHTML = ""
+      script.remove()
+    }
   }, [])
 
   return (
@@ -55,9 +64,9 @@ const ContactsPage = () => {
               style={{ backgroundImage: `url(${PhotoBg.src})` }}
             />
           </div>
-          <div className="flex-1 md:min-h-[300px] overflow-hidden rounded-2xl shadow hover:shadow-lg transition-shadow flex justify-center items-center">
+          <div className="relative flex-1 md:min-h-[300px] overflow-hidden rounded-2xl shadow hover:shadow-lg transition-shadow">
             {!mapLoaded && (
-              <div className="absolute inset-0 flex justify-center items-center bg-gray-50">
+              <div className="absolute inset-0 flex justify-center items-center bg-white">
                 <Spinner color="primary" size="lg" variant="gradient" />
               </div>
             )}
@@ -66,11 +75,11 @@ const ContactsPage = () => {
               className={`h-full w-full transition-opacity duration-700 ${
                 mapLoaded ? "opacity-100" : "opacity-0"
               }`}
-              aria-label="Карта расположения приюта"
+              aria-label="Карта расположения WhiskersTails"
             />
           </div>
         </div>
-        <div className="flex flex-col md:flex-row items-stretch gap-6 md:gap-20">
+        <div className="flex flex-col md:flex-row items-stretch gap-6 md:gap-20 w-full">
           <div
             className="flex-1 w-full min-h-60 bg-cover bg-center bg-no-repeat rounded-2xl shadow hover:shadow-lg transition-shadow"
             style={{ backgroundImage: `url(${PhotoTwoBg.src})` }}
@@ -84,7 +93,7 @@ const ContactsPage = () => {
               className="flex items-center justify-center gap-2 w-full p-6 rounded-2xl shadow hover:shadow-lg hover:scale-105 transition-all"
             >
               <Icon icon="mdi:whatsapp" className="text-2xl text-green-500" />
-              <span className="font-nunito text-xl font-semibold">WhatsApp</span>
+              <span className="font-nunito text-xl font-bold">WhatsApp</span>
             </a>
 
             <a
@@ -95,7 +104,7 @@ const ContactsPage = () => {
               className="flex items-center justify-center gap-2 w-full p-6 rounded-2xl shadow hover:shadow-lg hover:scale-105 transition-all"
             >
               <Icon icon="mdi:telegram" className="text-2xl text-blue-400" />
-              <span className="font-nunito text-xl font-semibold">Telegram</span>
+              <span className="font-nunito text-xl font-bold">Telegram</span>
             </a>
 
             <a
@@ -103,10 +112,10 @@ const ContactsPage = () => {
               aria-label="Наш Instagram"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 w-full p-6  rounded-2xl shadow hover:shadow-lg hover:scale-105 transition-all"
+              className="flex items-center justify-center gap-2 w-full p-6 rounded-2xl shadow hover:shadow-lg hover:scale-105 transition-all"
             >
               <Icon icon="mdi:instagram" className="text-2xl text-pink-500" />
-              <span className="font-nunito text-xl font-semibold">Instagram</span>
+              <span className="font-nunito text-xl font-bold">Instagram</span>
             </a>
 
             <a
@@ -114,7 +123,7 @@ const ContactsPage = () => {
               href={contacts.vk}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 w-full p-6  rounded-2xl shadow hover:shadow-lg hover:scale-105 transition-all"
+              className="flex items-center justify-center gap-2 w-full p-6 rounded-2xl shadow hover:shadow-lg hover:scale-105 transition-all"
             >
               <Icon icon="mdi:vk" className="text-2xl text-blue-700" />
               <span className="font-nunito text-xl font-bold">ВКонтакте</span>

@@ -58,7 +58,7 @@ const PetsPage = () => {
     <div className="flex flex-col justify-start items-start gap-7 md:gap-10 min-h-[calc(100vh-2.5rem)] md:min-h-[calc(100vh-10rem)] w-full pt-20 md:pt-40 px-4 md:px-20">
       <div className="flex flex-col gap-2 md:gap-4">
         <h2 className="text-3xl md:text-4xl text-center md:text-left leading-9 md:leading-12 font-bold">Анкеты питомцев</h2>
-        <p className="max-w-[500px]">
+        <p className="max-w-[600px]">
           Каталог животных, ищущих дом. Смотрите анкеты кошек и собак из приютов и{" "}
           <Link
             href="/add-pet"
