@@ -239,7 +239,7 @@ const Header = (props: NavbarProps) => {
         isOpen={isRegistrationOpen}
         onClose={() => setIsRegistrationOpen(false)}
         setIsLoginOpen={() => setIsLoginOpen(true)}
-      />
+      /> 
     </Navbar>
   )
 }

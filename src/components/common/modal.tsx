@@ -46,8 +46,8 @@ const CustomModal = ({ isOpen, onClose, size = "md", children }: IProps) => {
           ? "m-4 p-2 text-2xl text-gray-500 hover:text-black"
           : "m-2 p-2 text-lg text-gray-500 hover:text-black",
         body: isMobile
-          ? "py-0 pb-5 px-10 overflow-y-auto"
-          : "p-10 overflow-y-auto"
+          ? "py-0 pb-5 px-10 overflow-y-auto scrollbar-none"
+          : "p-10 overflow-y-auto scrollbar-none"
       }}
     >
       <ModalContent>

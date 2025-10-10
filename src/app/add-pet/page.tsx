@@ -5,10 +5,12 @@ import { Button, Alert, Spinner } from "@heroui/react"
 import { useAuthStore } from "@/store/auth.store"
 import AddPetForm from "../forms/add-pet.form"
 import LoginnModal from "@/components/UI/modals/login.modal"
+import RegistrationModal from "@/components/UI/modals/registration.modal"
 
 const AddPet = () => {
   const { isAuth, status } = useAuthStore()
-  const [isLoginOpen, setIsLoginOpen] = useState(false)
+    const [isLoginOpen, setIsLoginOpen] = useState(false)
+    const [isRegistrationOpen, setIsRegistrationOpen] = useState(false)
  
   if (status === 'loading') {
     return (
@@ -43,9 +45,16 @@ const AddPet = () => {
         />
 
         <LoginnModal
-          isOpen={isLoginOpen}
-          onClose={() => setIsLoginOpen(false)}
+        isOpen={isLoginOpen}
+        onClose={() => setIsLoginOpen(false)}
+        setIsRegistrationOpen={() => setIsRegistrationOpen(true)}
         />
+
+        <RegistrationModal
+          isOpen={isRegistrationOpen}
+          onClose={() => setIsRegistrationOpen(false)}
+          setIsLoginOpen={() => setIsLoginOpen(true)}
+      />
       </div>
     ) 
   }

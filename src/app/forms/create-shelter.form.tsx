@@ -89,7 +89,6 @@ const CreateShelterForm = ({ onClose }: IProps) =>  {
             selectedKeys={[formData.nameCity]}
             variant="bordered"
             startContent={<PetIcon />}
-            className="max-w-xs" 
             defaultSelectedKeys={[formData.nameCity]}
             onChange={(e) => setFormData({ ...formData, nameCity: e.target.value })}
             disabled={loadingCreateShelter}
