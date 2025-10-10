@@ -34,7 +34,7 @@ const ContactsPage = () => {
   }, [])
 
   return (
-    <div className="flex flex-col gap-7 md:gap-10 min-h-[calc(100vh-2.5rem)] md:min-h-[calc(100vh-10rem)] w-full pt-20 md:pt-40 px-4 md:px-20">
+    <div className="flex flex-col gap-7 md:gap-10 min-h-[calc(100vh-2.5rem)] md:min-h-[calc(100vh-10rem)] w-full pt-27 md:pt-40 px-4 md:px-20">
       <h1 className="text-3xl md:text-4xl leading-9 md:leading-12 font-bold">
         Контакты
       </h1>

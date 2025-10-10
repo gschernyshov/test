@@ -55,9 +55,9 @@ const PetsPage = () => {
   }
 
   return (
-    <div className="flex flex-col justify-start items-start gap-7 md:gap-10 min-h-[calc(100vh-2.5rem)] md:min-h-[calc(100vh-10rem)] w-full pt-20 md:pt-40 px-4 md:px-20">
-      <div className="flex flex-col gap-2 md:gap-4">
-        <h2 className="text-3xl md:text-4xl text-center md:text-left leading-9 md:leading-12 font-bold">Анкеты питомцев</h2>
+    <div className="flex flex-col justify-start items-start gap-7 md:gap-10 min-h-[calc(100vh-2.5rem)] md:min-h-[calc(100vh-10rem)] w-full pt-27 md:pt-40 px-4 md:px-20">
+      <div className="flex flex-col gap-4 md:gap-4">
+        <h2 className="text-3xl md:text-4xl leading-9 md:leading-12 font-bold">Анкеты питомцев</h2>
         <p className="max-w-[600px]">
           Каталог животных, ищущих дом. Смотрите анкеты кошек и собак из приютов и{" "}
           <Link
@@ -70,7 +70,7 @@ const PetsPage = () => {
       </div>
       <div className="flex flex-col md:flex-row flex-wrap gap-5 w-full">
         {petsData.map((petData) => (
-          <div key={petData.id} className="flex flex-col md:flex-row gap-2 md:gap-7 w-full md:w-[calc(50%-2.5rem)] p-3 bg-white rounded-xl shadow-[0_0_5px_rgba(0,0,0,0.1)]">
+          <div key={petData.id} className="flex flex-col md:flex-row gap-2 md:gap-7 w-full md:w-[calc(50%-0.75rem)] p-3 bg-white rounded-xl shadow-[0_0_5px_rgba(0,0,0,0.1)]">
             <div className="w-full md:w-2/5">
               <Image
                 src={petData.photo || "/avatars/base.jpg"}

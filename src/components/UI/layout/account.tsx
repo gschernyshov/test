@@ -42,7 +42,7 @@ const Account = () => {
   }
 
   return (
-     <div className="flex justify-center items-start min-h-[calc(100vh-2.5rem)] md:min-h-[calc(100vh-10rem)] w-full pt-20 md:pt-40 px-4 md:px-20">
+     <div className="flex justify-center items-start min-h-[calc(100vh-2.5rem)] md:min-h-[calc(100vh-10rem)] w-full pt-27 md:pt-40 px-4 md:px-20">
       {userData ? (
         <div className="w-full">
           <Breadcrumbs className="mb-5 md:mb-10">

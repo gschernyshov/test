@@ -60,10 +60,10 @@ const AddPet = () => {
   }
 
   return (
-    <div className="flex justify-center items-center min-h-[calc(100vh-2.5rem)] md:min-h-[calc(100vh-10rem)] w-full pt-20 md:pt-40 px-4 md:px-20">
+    <div className="flex justify-center items-center min-h-[calc(100vh-2.5rem)] md:min-h-[calc(100vh-10rem)] w-full pt-27 md:pt-40 px-4 md:px-20">
       <div className="flex flex-col md:flex-row flex gap-7 md:gap-10 w-full md:p-6 md:p-10 md:bg-white md:rounded-4xl md:shadow-2xl">
-        <div className="flex flex-col gap-6 md:gap-10 md:w-1/2">
-          <h1 className="w-2/3 md:w-full text-3xl md:text-4xl md:text-left leading-9 md:leading-12 font-bold">Создание анкеты питомца ✨</h1>
+        <div className="flex flex-col gap-4 md:gap-10 md:w-1/2">
+          <h1 className="w-2/3 md:w-full text-3xl md:text-4xl leading-9 md:leading-12 font-bold">Создание анкеты питомца ✨</h1>
           <p className="w-full md:w-2/3 text-gray-500">
             Заполните информацию о животном, прикрепите фото и расскажите его историю. Так вы поможете людям найти своего будущего друга 🐾
           </p>

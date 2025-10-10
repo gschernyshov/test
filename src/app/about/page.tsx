@@ -8,7 +8,7 @@ import { Button } from "@heroui/react"
 
 const AboutSection = () => {
   return (
-    <div className="flex flex-col justify-center items-center gap-7 md:gap-10 min-h-[calc(100vh-2.5rem)] md:min-h-[calc(100vh-10rem)] w-full pt-20 md:pt-40 px-4 md:px-20">
+    <div className="flex flex-col justify-center items-center gap-7 md:gap-10 min-h-[calc(100vh-2.5rem)] md:min-h-[calc(100vh-10rem)] w-full pt-27 md:pt-40 px-4 md:px-20">
       <div className="text-center max-w-3xl mx-auto mb-10">
         <h2 className="text-3xl md:text-4xl font-bold mb-6">О нас</h2>
         <p className="text-lg md:text-xl text-gray-700">
