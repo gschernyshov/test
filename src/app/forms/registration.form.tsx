@@ -8,9 +8,10 @@ import { Icon } from "@iconify/react"
 
 interface IProps {
   onClose: () => void
+  setIsLoginOpen: () => void
 }
 
-const RegistrationForm = ({ onClose }: IProps) =>  {
+const RegistrationForm = ({ onClose, setIsLoginOpen }: IProps) =>  {
   const [isVisible, setIsVisible] = useState(false)
   const [isConfirmVisible, setIsConfirmVisible] = useState(false)
   const toggleVisibility = () => setIsVisible(!isVisible)
@@ -182,11 +183,15 @@ const RegistrationForm = ({ onClose }: IProps) =>  {
         </form>
         
         <p className="text-small text-center">
-          <Link href="/login">
-            <span className="text-sm text-gray-500">
-              У вас уже есть аккаунт? Войти
-            </span>
-          </Link>
+          <span 
+            className="cursor-pointer text-sm text-gray-500"
+            onClick={() => {
+              onClose()
+              setIsLoginOpen()
+            }}
+          >
+            У вас уже есть аккаунт? Войти
+          </span>
         </p>
       </div>
     </div>

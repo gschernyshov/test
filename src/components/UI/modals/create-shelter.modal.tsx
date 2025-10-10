@@ -11,7 +11,7 @@ interface IProps {
 const CreateShelterModal = ({ isOpen, onClose }: IProps) => {
   return (
     <CustomModal isOpen={isOpen} onClose={onClose}>
-      <CreateShelterForm onClose={onClose}/>
+      <CreateShelterForm onClose={onClose} />
     </CustomModal>
   )
 }

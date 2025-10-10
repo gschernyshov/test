@@ -127,11 +127,10 @@ const Header = (props: NavbarProps) => {
                   Войти
                 </Button>
                 <Button
-                  className="bg-foreground text-background font-medium"
+                  className="font-medium"
                   color="primary"
-                  endContent={<Icon icon="solar:alt-arrow-right-linear" />}
                   radius="full"
-                  variant="flat"
+                  endContent={<Icon icon="solar:alt-arrow-right-linear" />}
                   onPress={() => setIsRegistrationOpen(true)}
                 >
                   Зарегистрироваться
@@ -148,11 +147,10 @@ const Header = (props: NavbarProps) => {
                   {session?.user?.name}
                 </Button>
                 <Button
-                  className="bg-foreground text-background font-medium"
+                  className="font-medium"
                   color="primary"
-                  endContent={<Icon icon="solar:alt-arrow-right-linear" />}
                   radius="full"
-                  variant="flat"
+                  endContent={<Icon icon="solar:alt-arrow-right-linear" />}
                   onPress={handleSignOut}
                 >
                   Выйти
@@ -232,13 +230,15 @@ const Header = (props: NavbarProps) => {
       </NavbarMenu>
 
       <LoginnModal
-       isOpen={isLoginOpen}
-       onClose={() => setIsLoginOpen(false)}
+        isOpen={isLoginOpen}
+        onClose={() => setIsLoginOpen(false)}
+        setIsRegistrationOpen={() => setIsRegistrationOpen(true)}
       />
       
       <RegistrationModal
-       isOpen={isRegistrationOpen}
-       onClose={() => setIsRegistrationOpen(false)}
+        isOpen={isRegistrationOpen}
+        onClose={() => setIsRegistrationOpen(false)}
+        setIsLoginOpen={() => setIsLoginOpen(true)}
       />
     </Navbar>
   )

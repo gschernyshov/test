@@ -7,10 +7,11 @@ import { signInWithCredentials } from "@/actions/sign-in"
 import { Icon } from "@iconify/react"
 
 interface IProps {
-    onClose: () => void
+  onClose: () => void
+  setIsRegistrationOpen: () => void
 }
 
-const LoginForm = ({ onClose }: IProps) => {
+const LoginForm = ({ onClose, setIsRegistrationOpen }: IProps) => {
   const [isVisible, setIsVisible] = useState(false)
   const toggleVisibility = () => setIsVisible(!isVisible)
 
@@ -127,11 +128,15 @@ const LoginForm = ({ onClose }: IProps) => {
         </Form>
         
         <p className="text-small text-center">
-          <Link href="/registration">
-            <span className="text-sm text-gray-500">
-              Зарегистрироваться
-            </span>
-          </Link>
+          <span 
+            className="cursor-pointer text-sm text-gray-500"
+            onClick={() => {
+              onClose()
+              setIsRegistrationOpen()
+            }}
+          >
+            Зарегистрироваться
+          </span>
         </p>
       </div>
     </div>

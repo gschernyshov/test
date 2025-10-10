@@ -9,7 +9,7 @@ const Impact = () => {
   const router = useRouter()
 
   return (
-    <div className="flex flex-col md:flex-row items-center gap-10 md:gap-20 w-full pt-20 md:pt-40 px-4 md:px-20">
+    <div className="flex flex-col md:flex-row justify-center items-center gap-10 md:gap-20 w-full pt-20 md:pt-40 px-4 md:px-20">
       <div className="w-full md:w-1/2">
         <Image 
           src={Photo}
