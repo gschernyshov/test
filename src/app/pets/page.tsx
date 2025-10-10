@@ -41,7 +41,7 @@ const PetsPage = () => {
   if (petsData === undefined) {
     return (
       <div className="flex justify-center items-center h-[calc(100vh-2.5rem)] md:h-[calc(100vh-10rem)] w-full">
-        <Spinner color="primary" size="lg" variant="gradient" />
+        <Spinner className="mt-10 md:mt-40" color="primary" size="lg" variant="gradient" />
       </div>
     )
   }
