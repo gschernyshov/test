@@ -66,7 +66,8 @@ const CreateShelterForm = ({ onClose }: IProps) =>  {
     <div className="flex justify-center items-center h-full w-full">
       <div className="flex flex-col gap-4 w-full  
                       max-h-[85vh] overflow-y-auto
-                      md:max-h-none md:overflow-visible"
+                      md:max-h-none md:overflow-visible
+                      scrollbar-none"
       >
         <p className="pb-4 text-left text-3xl font-semibold">
           Добавление нового приюта

@@ -3,7 +3,7 @@
 import { use } from "react"
 import { useEffect, useState } from "react"
 import Image from "next/image"
-import { Chip, Spinner } from "@heroui/react"
+import { Chip, Link, Spinner } from "@heroui/react"
 import { useAuthStore } from "@/store/auth.store"
 import { getPet } from "@/utils/pet"
 import petNotFound from "@/assets/illustrations/pet-not-found.jpg"
@@ -69,8 +69,18 @@ const PetPage = ({ params }: { params: Promise<{ id: string }> }) => {
     
   return (
    <div className="flex flex-col justify-start items-start gap-7 md:gap-10 min-h-[calc(100vh-2.5rem)] md:min-h-[calc(100vh-10rem)] w-full pt-20 md:pt-40 px-4 md:px-20">
-      <div className="flex flex-col gap-7 md:gap-10">
+      <div className="flex flex-col gap-2 md:gap-4">
         <h2 className="text-3xl md:text-4xl text-center md:text-left leading-9 md:leading-12 font-bold">Анкета питомца</h2>
+        <p className="max-w-[800px]">
+          В этой анкете вы познакомитесь с питомцем, который ищет заботливый дом. Прочитайте его историю, узнайте о характере и привычках. Вы также можете помочь —{" "}
+          <Link
+            href="/add-pet"
+            className="relative text-blue-500 hover:text-blue-600 after:block after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] hover:after:h-[2px] after:bg-blue-500 after:transition-all"
+          >
+            добавить свою анкету 
+          </Link>
+          {" "}или поделиться информацией, чтобы помочь животному найти хозяина ❤️
+        </p>
       </div>
       <div className="flex flex-col md:flex-row md:gap-12 p-7 bg-white rounded-4xl shadow-[0_0_5px_rgba(0,0,0,0.1)]">
         <div className="w-full md:w-1/2">
@@ -92,7 +102,7 @@ const PetPage = ({ params }: { params: Promise<{ id: string }> }) => {
                 <Chip color="warning" variant="bordered">{petData.age} мес.</Chip>
               </div>
               <p>{petData.description}</p>
-              <p className="text-sm text-gray-400">{new Date(petData.createdAt).toLocaleDateString()}</p>
+              <p className="text-sm text-gray-400">От {new Date(petData.createdAt).toLocaleDateString()}</p>
             </div>
           </div>
           {!isAuth ? (

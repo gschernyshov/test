@@ -4,7 +4,7 @@ const Skeleton = () => {
   return (
     <Card className="w-full space-y-5 p-4" radius="lg">
       <SkeletonHeroui className="rounded-lg">
-        <div className="h-100 md:h-40 rounded-lg bg-default-300" />
+        <div className="h-60 md:h-40 rounded-lg bg-default-300" />
       </SkeletonHeroui>
       <div className="space-y-3">
         <SkeletonHeroui className="w-3/5 rounded-lg">

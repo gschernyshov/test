@@ -129,7 +129,7 @@ const LoginForm = ({ onClose, setIsRegistrationOpen }: IProps) => {
         
         <p className="text-small text-center">
           <span 
-            className="cursor-pointer text-sm text-gray-500"
+            className="text-sm text-gray-500 cursor-pointer"
             onClick={() => {
               onClose()
               setIsRegistrationOpen()

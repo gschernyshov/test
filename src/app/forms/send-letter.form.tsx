@@ -54,7 +54,7 @@ const SendLetterForm = ({ userId }: ISendLetterFormProps) => {
         placeholder="Введите свой номер телефона"
         type="tel"
         variant="bordered" 
-        className="w-3/5"
+        className="w-4/5 md:w-3/5"
         value={formData.telephone}
         onChange={handleChange}
         isDisabled={loadingSendLetter}
