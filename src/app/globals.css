@@ -12,7 +12,8 @@
   --font-nunito: var(--font-nunito);
   --font-inter: var(--font-inter);
   --color-transparent-blue: #0273E620; 
-  --color-blue: #0F2851;
+  --color-dark-blue: #0F2851;
+  --color-active-nav-item: black;
 }
 
 @theme inline {
@@ -26,8 +27,18 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #1a3e77;
     --foreground: #ededed;
+    --color-active-nav-item: var(--color-blue-500);
+  }
+
+  .bg-default-200\/50 {
+    background-color: color-mix(in oklab, #1a3e77 50%, transparent);
+  }
+
+  .dark-scheme-button-white {
+    color: white !important;
+    border: 1.5px solid white !important;
   }
 }
 
@@ -37,7 +48,7 @@ body {
   font-family: var(--font-inter), sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6, button, .nunito {
+h1, h2, h3, h4, h5, h6, button {
   font-family: var(--font-nunito);
 }
 
@@ -47,4 +58,8 @@ h1, h2, h3, h4, h5, h6, button, .nunito {
   textarea {
     font-size: 16px !important;
   }
+}
+
+.active-nav-item {
+  color: var(--color-active-nav-item);
 }

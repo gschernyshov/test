@@ -41,7 +41,7 @@ const ContactsPage = () => {
       <div className="flex flex-col gap-6 md:gap-20 w-full">
         <div className="flex flex-col md:flex-row items-stretch gap-6 md:gap-20 w-full">
           <div className="flex flex-col gap-6 md:gap-8 w-full md:w-1/3">
-            <div className="flex flex-col flex-1 gap-4 order-2 md:order-1 w-full p-8 bg-gray-50 rounded-2xl shadow hover:shadow-lg transition-shadow">
+            <div className="flex flex-col flex-1 gap-4 order-2 md:order-1 w-full p-8 rounded-2xl shadow hover:shadow-lg transition-shadow">
               <Link href={`tel:${contacts.telephone}`}>
                 <div className="flex items-center gap-4">
                   <Icon icon="mdi:phone" className="text-xl" />

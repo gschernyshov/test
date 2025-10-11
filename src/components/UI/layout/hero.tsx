@@ -22,6 +22,8 @@ const Hero = () => {
         <Image 
           src={PhotoMobile}
           fill
+          sizes="(max-width: 768px) 100vw"
+          quality={100}
           priority
           alt="Кошки и собаки — баннер WhiskersTails"
           className="absolute top-0 left-0 block md:hidden object-cover"
@@ -34,6 +36,7 @@ const Hero = () => {
               color="primary" 
               variant="ghost" 
               size="lg"
+              className="dark-scheme-button-white"
               onPress={() => router.push("/pets")}
             >
               Анкеты

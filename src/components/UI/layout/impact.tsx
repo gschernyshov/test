@@ -32,6 +32,7 @@ const Impact = () => {
             color="primary" 
             variant="ghost" 
             size="lg"
+            className="dark-scheme-button-white"
             onPress={() => router.push("/add-pet")}
           >
             Создать анкету

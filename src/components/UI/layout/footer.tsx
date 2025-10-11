@@ -4,7 +4,7 @@ const Footer = () => {
   const contacts = siteConfig.contacts
 
   return (
-    <div className="w-full mt-20 md:mt-40 pt-10 md:pt-20 px-4 md:px-20 bg-blue text-sm">
+    <div className="w-full mt-20 md:mt-40 pt-10 md:pt-20 px-4 md:px-20 bg-dark-blue text-sm">
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 w-full max-w-2xl mb-5 md:mb-10">
         <div className="flex flex-col gap-1">
           <h2 className="mb-2 text-neutral-50 text-3xl">WhiskersTails</h2>

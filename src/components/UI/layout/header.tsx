@@ -49,7 +49,7 @@ const Header = (props: NavbarProps) => {
         return (
           <NavbarItem key={item.href}>
             <Link 
-              className={`${isActive ? "text-neutral-950" : "text-default-500"}`} 
+              className={isActive ? "active-nav-item" : ""} 
               href={item.href}
             >
               {item.label}
@@ -64,7 +64,7 @@ const Header = (props: NavbarProps) => {
     return menu.map((item, index) => (
       <NavbarMenuItem key={item.href}>
         <Link 
-          className="text-default-500 mb-2 w-full" 
+          className="mb-2 w-full" 
           href={item.href}
           onClick={() => setIsMenuOpen(false)}
         >
@@ -95,7 +95,7 @@ const Header = (props: NavbarProps) => {
         onClick={() => setIsMenuOpen(false)}
       >
         <NavbarBrand>
-          <span className="text-medium ml-2 font-medium font-nunito">WhiskersTails</span>
+          <span className="ml-2 text-lg font-nunito">WhiskersTails</span>
         </NavbarBrand>
       </Link>
 
@@ -105,7 +105,7 @@ const Header = (props: NavbarProps) => {
       </NavbarContent>
 
       {/* Right Content */}
-      <NavbarContent className="hidden md:flex" justify="end">
+      <NavbarContent className="hidden md:flex !grow-0" justify="end">
         <NavbarItem className="ml-2 flex! gap-2">
           {status === "loading" ? 
             <Button 
@@ -119,9 +119,8 @@ const Header = (props: NavbarProps) => {
             !isAuth ? (
               <>
                 <Button 
-                  className="text-default-500" 
                   radius="full" 
-                  variant="light" 
+                  className="bg-white"
                   onPress={() => setIsLoginOpen(true)}
                 >
                   Войти
@@ -139,9 +138,7 @@ const Header = (props: NavbarProps) => {
             ) : (
               <>
                 <Button 
-                  className="text-default-500" 
-                  radius="full" 
-                  variant="light" 
+                  radius="full"
                   onPress={() => router.push("/account")}
                 >
                   {session?.user?.name}
