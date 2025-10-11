@@ -71,6 +71,7 @@ const Shelters = () => {
                 color="primary" 
                 variant="flat" 
                 radius="full"
+                className="dark-scheme-button-white"
                 >
                 Загрузка...
               </Button>

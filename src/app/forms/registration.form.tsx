@@ -161,16 +161,16 @@ const RegistrationForm = ({ onClose, setIsLoginOpen }: IProps) =>  {
             onChange={handleChange}
             isDisabled={loadingRegistration}
           />
-          <Checkbox isRequired className="py-4" size="sm" isDisabled={loadingRegistration}>
+          <Checkbox isRequired className="py-4 text-white" size="sm" isDisabled={loadingRegistration}>
             Я согласен с&nbsp;
             <Link className="relative z-1" href="/">
-              <span className="text-sm text-gray-500">
+              <span className="text-sm !text-gray-500">
                 Условиями
               </span>
             </Link>
             &nbsp;и&nbsp;
             <Link className="relative z-1" href="/">
-              <span className="text-sm text-gray-500">
+              <span className="text-sm !text-gray-500">
                 Политикой конфиденциальности
               </span>
             </Link>

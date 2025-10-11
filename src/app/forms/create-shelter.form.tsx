@@ -95,7 +95,7 @@ const CreateShelterForm = ({ onClose }: IProps) =>  {
             disabled={loadingCreateShelter}
           >
             {cities.map((citie) => (
-              <SelectItem key={citie.key}>{citie.label}</SelectItem>
+              <SelectItem key={citie.key} className="text-black">{citie.label}</SelectItem>
             ))}
           </Select>
           <Input

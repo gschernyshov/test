@@ -113,7 +113,7 @@ const AddPetForm = () => {
             >
               <label
                 htmlFor="image_uploads"
-                className="cursor-pointer"
+                className="cursor-pointer !text-white"
               >
                 Добавить фото
               </label>
@@ -185,6 +185,7 @@ const AddPetForm = () => {
       </RadioGroup>
       <div className="w-full">
         <Slider
+          isRequired
           label="Возраст (в месяцах)"
           color="primary"
           maxValue={120}
