@@ -49,7 +49,7 @@ const Header = (props: NavbarProps) => {
         return (
           <NavbarItem key={item.href}>
             <Link 
-              className={isActive ? "active-nav-item" : ""} 
+              className={`nav-item ${isActive ? "active-nav-item" : ""}`}
               href={item.href}
             >
               {item.label}
@@ -95,7 +95,7 @@ const Header = (props: NavbarProps) => {
         onClick={() => setIsMenuOpen(false)}
       >
         <NavbarBrand>
-          <span className="ml-2 text-lg font-nunito">WhiskersTails</span>
+          <span className="ml-2 font-nunito text-lg font-bold">WhiskersTails</span>
         </NavbarBrand>
       </Link>
 
@@ -139,6 +139,7 @@ const Header = (props: NavbarProps) => {
               <>
                 <Button 
                   radius="full"
+                  className="bg-white"
                   onPress={() => router.push("/account")}
                 >
                   {session?.user?.name}

@@ -9,7 +9,7 @@ interface IUserPetProps {
 
 const UserPet = ({ pet }: IUserPetProps) => {
   return (
-    <div key={pet.id} className="flex flex-col md:flex-row gap-2 md:gap-7 p-3 w-full bg-white rounded-xl shadow-[0_0_5px_rgba(0,0,0,0.1)]">
+    <div key={pet.id} className="flex flex-col md:flex-row gap-2 md:gap-7 p-3 w-full bg-white rounded-xl shadow-[0_0_5px_rgba(0,0,0,0.1)] text-black">
       <div className="w-full md:w-2/5">
         <Image
           src={pet.photo || "/avatars/base.jpg"}

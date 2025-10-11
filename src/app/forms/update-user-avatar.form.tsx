@@ -43,6 +43,7 @@ const UpdateUserAvatarForm = () => {
             size="md" 
             color="default" 
             variant="bordered" 
+            className="text-gray-500"
             onPress={handleUpload} 
             disabled={loadingUpdateUserDataById}
           >

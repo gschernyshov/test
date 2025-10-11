@@ -96,9 +96,9 @@ const AddPetForm = () => {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col items-start gap-6">
+    <form onSubmit={handleSubmit} className="flex flex-col items-start gap-6 text-black">
       <div className="flex flex-col items-center gap-1">
-        <h2 className="text-3xl text-center leading-12 font-bold">Введите данные</h2>
+        <h2 className="text-3xl text-center text-black leading-12 font-bold">Введите данные</h2>
         <p className="text-sm text-center text-gray-500">Пожалуйста, указывайте только достоверные данные о питомце. Информация будет опубликована в открытом доступе, чтобы помочь людям найти и забрать животное</p>
       </div>
 

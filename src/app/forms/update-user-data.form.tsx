@@ -12,7 +12,7 @@ const UpdateUserDataForm = () => {
   } = useAccount() 
 
   return (
-    <form className="flex flex-col gap-7" onSubmit={handleSubmit}>
+    <form className="flex flex-col gap-7 text-black" onSubmit={handleSubmit}>
       <div className="flex justify-between items-center w-full ">
         <p className="text-sm text-gray-500">Имя:</p>
         <Input 

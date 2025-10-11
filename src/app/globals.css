@@ -4,7 +4,7 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: #ffffff;
+  --background: #cedefa;
   --foreground: #171717;
 }
 
@@ -13,6 +13,7 @@
   --font-inter: var(--font-inter);
   --color-transparent-blue: #0273E620; 
   --color-dark-blue: #0F2851;
+  --color-nav-item: var(--color-gray-500);
   --color-active-nav-item: black;
 }
 
@@ -29,7 +30,8 @@
   :root {
     --background: #1a3e77;
     --foreground: #ededed;
-    --color-active-nav-item: var(--color-blue-500);
+    --color-nav-item: var(--color-gray-400);
+    --color-active-nav-item: white;
   }
 
   .bg-default-200\/50 {
@@ -40,6 +42,10 @@
     color: white !important;
     border: 1.5px solid white !important;
   }
+}
+
+html {
+  background: var(--background);
 }
 
 body {
@@ -58,6 +64,11 @@ h1, h2, h3, h4, h5, h6, button {
   textarea {
     font-size: 16px !important;
   }
+}
+
+
+.nav-item {
+  color: var(--color-nav-item);
 }
 
 .active-nav-item {

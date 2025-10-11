@@ -19,7 +19,7 @@ const Impact = () => {
       </div>
       <div className="flex flex-col items-center md:items-start gap-7 md:gap-10 w-full md:w-1/2">
         <h2 className="text-3xl md:text-4xl text-center md:text-left leading-9 md:leading-12 font-bold">
-          Почему помощь бездомным животным так важна прямо сейчас
+          <span className="text-blue-500">Почему помощь</span> бездомным животным так <span className="text-blue-500">важна прямо сейчас?</span>
         </h2>
         <p className="text-center md:text-left">
           Каждый год тысячи собак и кошек оказываются на улице, лишаясь заботы и безопасности.

@@ -93,7 +93,7 @@ const PetPage = ({ params }: { params: Promise<{ id: string }> }) => {
               className="h-full w-full max-h-120 object-cover rounded-2xl"
             />
           </div>
-          <div className="flex flex-col justify-between gap-20 w-full md:w-1/2 pt-5 ">
+          <div className="flex flex-col justify-between gap-20 w-full md:w-1/2 pt-5 text-black">
             <div className="flex flex-col gap-4">
               <h2 className="text-3xl leading-8 font-bold">{petData.species} из г. {petData.nameCity}<br /><span className="text-base text-gray-500 leading-none">(н. п. {petData.location})</span><br />ищет себе дом 🏠</h2>
               <div className="flex flex-col gap-4">

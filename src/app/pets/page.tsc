@@ -3,13 +3,11 @@
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import Image from "next/image"
-import { Button, Chip, Spinner } from "@heroui/react"
+import { Chip, Spinner } from "@heroui/react"
 import { getPets } from "@/utils/pet"
 import { IPet } from "@/types/pet"
-import { useRouter } from "next/navigation"
 
 const PetsPage = () => {
-  const router = useRouter()
   const [petsData, setPetsData] = useState<IPet[] | null | undefined>(undefined)
 
   useEffect(() => {
@@ -57,65 +55,51 @@ const PetsPage = () => {
   }
 
   return (
-    <div className="flex flex-col justify-center items-center gap-7 md:gap-10 min-h-[calc(100vh-2.5rem)] md:min-h-[calc(100vh-10rem)] w-full pt-27 md:pt-33 px-4 md:px-20">
-        <span className="text-xs text-blue-500 border border-blue-500 rounded-full px-4 py-2 inline-block">
-          мир пушистиков пушистиков #1
-        </span>
-      <div className="flex flex-col justify-center items-center gap-4 md:gap-7 w-full mb-4">
-        <h2 className="text-3xl md:text-5xl text-center leading-9 md:leading-12 font-bold">Анкеты питомцев</h2>
-        <p className="text-center max-w-[700px]">
+    <div className="flex flex-col justify-start items-start gap-7 md:gap-10 min-h-[calc(100vh-2.5rem)] md:min-h-[calc(100vh-10rem)] w-full pt-27 md:pt-40 px-4 md:px-20">
+      <div className="flex flex-col gap-4 md:gap-4">
+        <h2 className="text-3xl md:text-4xl leading-9 md:leading-12 font-bold">Анкеты питомцев</h2>
+        <p className="max-w-[600px]">
           Каталог животных, ищущих дом. Смотрите анкеты кошек и собак из приютов и{" "}
           <Link
             href="/add-pet"
+            className="relative text-blue-500 hover:text-blue-600 after:block after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] hover:after:h-[2px] after:bg-blue-500 after:transition-all"
           >
             добавляйте собственные объявления
           </Link>
-          {" "}о животных, которые нуждаются в помощи.
-        </p>
-        <div className="flex gap-2">
-          <Button 
-            radius="full"
-            color="primary"
-            className="px-6"
-            size="md"
-            onPress={() => router.push("/add-pet")}
-          >
-            Добавить анкету питомца
-          </Button>
-        </div>
+          {" "}о животных, которые нуждаются в помощи.</p>
       </div>
       <div className="flex flex-col md:flex-row flex-wrap gap-5 w-full">
         {petsData.map((petData) => (
-          <div key={petData.id} className="flex flex-col md:flex-row gap-2 md:gap-7 w-full md:w-[calc(50%-0.75rem)] p-2 bg-white rounded-4xl shadow-[0_0_5px_rgba(0,0,0,0.1)]">
+          <div key={petData.id} className="flex flex-col md:flex-row gap-2 md:gap-7 w-full md:w-[calc(50%-0.75rem)] p-3 bg-white rounded-xl shadow-[0_0_5px_rgba(0,0,0,0.1)]">
             <div className="w-full md:w-2/5">
               <Image
                 src={petData.photo || "/avatars/base.jpg"}
                 alt={`Фотография ${petData.species}`}   
                 height={750}
                 width={750}    
-                className="h-full max-h-65 w-full object-cover rounded-4xl md:rounded-tl-none md:rounded-bl-none"
+                className="h-full max-h-65 w-full object-cover rounded-xl"
               />
             </div>
             <div className="flex flex-col justify-between gap-10 w-full md:w-3/5 pt-2 ">
               <div className="flex flex-col gap-4">
-                <h3 className="text-2xl text-black leading-7 font-bold">{petData.species} из г. {petData.nameCity}<br /><span className="text-base text-gray-500 leading-none">(н. п. {petData.location})</span><br />ищет себе дом 🏠</h3>
+                <h3 className="text-2xl leading-7 font-bold">{petData.species} из г. {petData.nameCity}<br /><span className="text-base text-gray-500 leading-none">(н. п. {petData.location})</span><br />ищет себе дом 🏠</h3>
                 <div className="flex flex-col gap-4">
                   <div className="flex gap-1">
                     <Chip color="warning" variant="bordered" size="sm">{petData.species}</Chip>
                     <Chip color="warning" variant="bordered" size="sm">{petData.gender}</Chip>
                     <Chip color="warning" variant="bordered" size="sm">{petData.age} мес.</Chip>
                   </div>
-                  <p className="text-sm text-black">{petData.description}</p>
+                  <p className="text-sm">{petData.description}</p>
                 </div>
               </div>
-              <div className="flex justify-between m-4">
+              <div className="flex justify-between">
                 <Link
                   className="text-sm text-blue-500" 
                   href={`/pet/${petData.id}`}
                 >
                   Страница питомца
                 </Link>
-                <p className="mr-5 text-sm text-gray-400">От {new Date(petData.createdAt).toLocaleDateString()}</p>
+                <p className="text-sm text-gray-400">От {new Date(petData.createdAt).toLocaleDateString()}</p>
               </div>
             </div>
           </div>

@@ -49,7 +49,7 @@ const Shelters = () => {
   return (
     <>
       <div className="flex flex-col justify-start items-start gap-7 md:gap-10 w-full pt-27 md:pt-40 px-4 md:px-20">
-        <div className="flex flex-col justify-center items-center gap-4 w-full md:mb-4">
+        <div className="flex flex-col justify-center items-center gap-4 w-full">
           <h1 className="text-3xl md:text-4xl text-center leading-9 md:leading-12 font-bold">Список приютов для животных в вашем городе</h1>
           <div className="flex flex-wrap justify-center items-center gap-1">
             <p className="text-center">Вы можете легко{" "}
@@ -63,7 +63,7 @@ const Shelters = () => {
             </p>
           </div>
         </div>
-        <div className="flex justify-center items-center gap-2 w-full md:mb-4">
+        <div className="flex justify-center items-center gap-2 w-full">
           {cities === null ? (
             <div className="flex items-center gap-2">
               <Button 
@@ -96,7 +96,7 @@ const Shelters = () => {
           {cities !== null && cities.length !== 0 && shelters === null ? (
             <Card className="max-w-[500px] m-auto pl-3">
               <CardBody>
-                <p className="text-center">Выберите город из списка 🥰</p>
+                <p className="text-center text-black">Выберите город из списка 🥰</p>
               </CardBody>
             </Card>
           ) : (
