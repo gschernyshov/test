@@ -106,7 +106,7 @@ const LoginForm = ({ onClose, setIsRegistrationOpen }: IProps) => {
             isDisabled={loadingLogin}
           />
           <div className="flex justify-between items-center w-full y-2 px-1 text-white">
-            <Checkbox isRequired defaultSelected name="remember" size="sm" className="" isDisabled={loadingLogin}>
+            <Checkbox isRequired defaultSelected name="remember" size="sm" isDisabled={loadingLogin}>
               Запомнить меня
             </Checkbox>
             <Link className="text-default-500" href="/registration">

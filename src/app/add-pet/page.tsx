@@ -1,11 +1,13 @@
 "use client"
 
 import { useState } from "react"
+import Image from 'next/image'
 import { Button, Alert, Spinner } from "@heroui/react"
 import { useAuthStore } from "@/store/auth.store"
 import AddPetForm from "../forms/add-pet.form"
 import LoginnModal from "@/components/UI/modals/login.modal"
 import RegistrationModal from "@/components/UI/modals/registration.modal"
+import Photo from "@/assets/photo/cards.png"
 
 const AddPet = () => {
   const { isAuth, status } = useAuthStore()
@@ -61,12 +63,21 @@ const AddPet = () => {
 
   return (
     <div className="flex justify-center items-center min-h-[calc(100vh-2.5rem)] md:min-h-[calc(100vh-10rem)] w-full pt-27 md:pt-40 px-4 md:px-20">
-      <div className="flex flex-col md:flex-row flex gap-7 md:gap-10 w-full md:p-6 md:p-10 md:bg-white md:rounded-4xl md:shadow-2xl">
-        <div className="flex flex-col gap-4 md:gap-6 md:w-1/2">
-          <h1 className="w-2/3 md:w-full text-3xl md:text-4xl text-black leading-9 md:leading-12 font-bold">Создание анкеты питомца ✨</h1>
-          <p className="w-full md:w-4/5 text-gray-400">
-            Заполните информацию о животном, прикрепите фото и расскажите его историю. Так вы поможете людям найти своего будущего друга 🐾
-          </p>
+      <div className="flex flex-col md:flex-row flex gap-10 w-full md:p-6 md:p-10 md:bg-white md:rounded-4xl md:shadow-2xl">
+        <div className="flex flex-col jusify-between gap-4 md:gap-10 md:w-1/2">
+          <div className="flex flex-col jusify-between gap-4 md:gap-6 w-full">
+            <h1 className="w-3/4 md:w-full text-3xl md:text-4xl  leading-9 md:leading-12 font-bold">Создание анкеты питомца ✨</h1>
+            <p className="w-full md:w-4/5 text-gray-400">
+              Заполните информацию о животном, прикрепите фото и расскажите его историю. Так вы поможете людям найти своего будущего друга 🐾
+            </p>
+          </div>
+          <div className="w-full">
+            <Image 
+              src={Photo}
+              sizes="100vw"
+              alt="Фотография с животными"
+            />
+          </div>
         </div>
         <div className="md:w-1/2 py-5 px-4 md:px-15 rounded-4xl bg-white shadow-[0_0_5px_rgba(0,0,0,0.1)]">
           <AddPetForm />
