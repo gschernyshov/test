@@ -108,7 +108,7 @@ const PetsPage = () => {
                   <p className="text-sm text-black">{petData.description}</p>
                 </div>
               </div>
-              <div className="flex justify-between m-4">
+              <div className="flex justify-between m-3">
                 <Link
                   className="text-sm text-blue-500" 
                   href={`/pet/${petData.id}`}

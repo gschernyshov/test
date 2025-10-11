@@ -52,7 +52,7 @@ const LoginForm = ({ onClose, setIsRegistrationOpen }: IProps) => {
   }
 
   return (
-    <div className="flex justify-center items-center h-full w-full">
+    <div className="flex justify-center items-center h-full w-full text-black">
       <div className="flex flex-col gap-4 w-full max-w-sm">
         <p className="pb-4 text-left text-3xl font-semibold">
           Вход

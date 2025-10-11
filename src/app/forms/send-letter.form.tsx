@@ -46,7 +46,7 @@ const SendLetterForm = ({ userId }: ISendLetterFormProps) => {
   }
 
   return (
-    <form className="flex flex-col gap-2" onSubmit={handleSubmit}>
+    <form className="flex flex-col gap-2 text-black" onSubmit={handleSubmit}>
       <h2 className="text-lg leading-8 font-bold">Напишите владельцу питомца</h2>
       <Input 
         isRequired

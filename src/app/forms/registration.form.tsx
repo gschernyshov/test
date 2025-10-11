@@ -56,7 +56,7 @@ const RegistrationForm = ({ onClose, setIsLoginOpen }: IProps) =>  {
   }
 
   return (
-   <div className="flex justify-center items-center h-full w-full">
+   <div className="flex justify-center items-center h-full w-full text-black">
       <div className="flex flex-col gap-4 w-full  
                       max-h-[85vh] overflow-y-auto
                       md:max-h-none md:overflow-visible

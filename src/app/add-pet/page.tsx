@@ -28,7 +28,7 @@ const AddPet = () => {
           color="primary"
           className="max-w-3xl "
           title={
-            <div className="w-4/5 md:w-full">
+            <div className="w-[95%] md:w-full">
               Данная страница доступна только для авторизованных пользователей!
             </div>
           }

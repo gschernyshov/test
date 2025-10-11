@@ -54,6 +54,12 @@ body {
   font-family: var(--font-inter), sans-serif;
 }
 
+form, form span, label, input,
+  select,
+  textarea{
+  color: #171717 !important;
+}
+
 h1, h2, h3, h4, h5, h6, button {
   font-family: var(--font-nunito);
 }
