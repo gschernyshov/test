@@ -12,9 +12,9 @@ const Shelters = () => {
   return (
     <>
       <div className="flex flex-col md:flex-row md:justify-center items-center w-full pt-20 md:pt-40 px-4 md:px-20">
-        <div className="flex flex-col items-center md:items-start gap-7 md:gap-10 w-full md:w-1/2">
+        <div className="flex flex-col items-center md:items-start gap-7 md:gap-10 w-full max-w-2xl"> 
           <h2 className="text-3xl md:text-4xl text-center leading-9 md:leading-12 font-bold">Найдите и / или поддержите приют</h2>
-          <p className="text-center max-w-[600px] mb-4 md:mb-0">Наш каталог приютов помогает людям находить места, где животные ждут помощи и дома. Вы можете просмотреть существующие приюты или добавить новый, чтобы помочь еще большему числу питомцев.</p>
+          <p className="text-center max-w-2xl mb-4 md:mb-0">Наш каталог приютов помогает людям находить места, где животные ждут помощи и дома. Вы можете просмотреть существующие приюты или добавить новый, чтобы помочь еще большему числу питомцев.</p>
           <ButtonGroup
            className="m-auto"
           >

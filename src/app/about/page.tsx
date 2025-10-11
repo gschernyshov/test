@@ -66,7 +66,7 @@ const AboutSection = () => {
         </div>
       </div>
 
-      <div className="flex flex-col justify-center items-center gap-5 md:gap-7 text-center max-w-[500px] md:mt-10">
+      <div className="flex flex-col justify-center items-center gap-5 md:gap-7 text-center max-w-xl md:mt-10">
         <p className="w-[95%] md:w-full text-lg md:text-xl">
           Хотите узнать больше или обсудить ваш проект? Мы всегда на связи и рады помочь!
         </p>

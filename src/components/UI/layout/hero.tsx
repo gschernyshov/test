@@ -11,7 +11,7 @@ const Hero = () => {
 
   return (
     <>
-      <div className="relative min-h-screen w-full">
+      <div className="relative min-h-[800px] w-full">
         <Image 
           src={Photo}
           fill
@@ -29,7 +29,7 @@ const Hero = () => {
           alt="Кошки и собаки — баннер WhiskersTails"
           className="absolute top-0 left-0 block md:hidden object-cover"
         />
-        <div className="absolute top-0 left-0 flex flex-col justify-end md:justify-center min-h-screen w-full pb-12 md:pb-0 px-4 md:px-20">
+        <div className="absolute top-0 left-0 flex flex-col justify-end md:justify-center min-h-[800px] w-full pb-10 md:pb-0 px-4 md:px-20">
           <div className="flex flex-col items-start gap-6 w-full md:w-2/5">
             <h1 className="text-3xl md:text-4xl leading-9 md:leading-12 font-bold">WhiskersTails — место, где питомцы находят друзей, а люди находят радость общения.</h1>
             <p>Познакомиться с питомцами 🐾</p>

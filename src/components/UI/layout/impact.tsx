@@ -17,7 +17,7 @@ const Impact = () => {
           alt="Фотография с животными"
         />
       </div>
-      <div className="flex flex-col items-center md:items-start gap-7 md:gap-10 w-full md:w-1/2">
+      <div className="flex flex-col items-center gap-7 md:gap-10 w-full md:w-1/2">
         <h2 className="text-3xl md:text-4xl text-center md:text-left leading-9 md:leading-12 font-bold">
           <span className="text-blue-500">Почему помощь</span> бездомным животным так <span className="text-blue-500">важна прямо сейчас?</span>
         </h2>
