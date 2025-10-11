@@ -38,8 +38,8 @@ const ContactsPage = () => {
       <h1 className="text-3xl md:text-4xl leading-9 md:leading-12 font-bold">
         Контакты
       </h1>
-      <div className="flex flex-col gap-6 md:gap-20 w-full">
-        <div className="flex flex-col md:flex-row items-stretch gap-6 md:gap-20 w-full">
+      <div className="flex flex-col gap-7 md:gap-20 w-full">
+        <div className="flex flex-col md:flex-row items-stretch gap-7 md:gap-20 w-full">
           <div className="flex flex-col gap-6 md:gap-8 w-full md:w-1/3">
             <div className="flex flex-col flex-1 gap-4 order-2 md:order-1 w-full p-8 rounded-2xl bg-white shadow hover:shadow-lg transition-shadow">
               <Link href={`tel:${contacts.telephone}`}>
@@ -60,7 +60,7 @@ const ContactsPage = () => {
               </div>
             </div>
             <div 
-              className="h-40 w-full order-1 md:order-2 bg-cover bg-center bg-no-repeat rounded-2xl bg-white shadow hover:shadow-lg transition-shadow"
+              className="h-40 w-full order-1 md:order-2 rounded-2xl bg-white bg-cover bg-center bg-no-repeat shadow hover:shadow-lg transition-shadow"
               style={{ backgroundImage: `url(${PhotoBg.src})` }}
             />
           </div>
@@ -81,11 +81,11 @@ const ContactsPage = () => {
         </div>
         <div className="flex flex-col md:flex-row items-stretch gap-6 md:gap-20 w-full">
           <div
-            className="flex-1 w-full min-h-60 bg-cover bg-center bg-no-repeat rounded-2xl bg-white shadow hover:shadow-lg transition-shadow"
+            className="flex-1 w-full min-h-60 rounded-2xl bg-white bg-cover bg-center bg-no-repeat shadow hover:shadow-lg transition-shadow"
             style={{ backgroundImage: `url(${PhotoTwoBg.src})` }}
           />
          <div className="flex flex-col gap-6 md:gap-4 w-full md:w-1/3">
-            <a
+            <Link
               href={contacts.whatsApp}
               aria-label="Наш WhatsApp"
               target="_blank"
@@ -94,9 +94,9 @@ const ContactsPage = () => {
             >
               <Icon icon="mdi:whatsapp" className="text-2xl text-green-500" />
               <span className="font-nunito text-xl text-black font-bold">WhatsApp</span>
-            </a>
+            </Link>
 
-            <a
+            <Link
               href={contacts.telegram}
               aria-label="Наш Telegram"
               target="_blank"
@@ -105,9 +105,9 @@ const ContactsPage = () => {
             >
               <Icon icon="mdi:telegram" className="text-2xl text-blue-400" />
               <span className="font-nunito text-xl text-black font-bold">Telegram</span>
-            </a>
+            </Link>
 
-            <a
+            <Link
               href={contacts.instagram}
               aria-label="Наш Instagram"
               target="_blank"
@@ -116,9 +116,9 @@ const ContactsPage = () => {
             >
               <Icon icon="mdi:instagram" className="text-2xl text-pink-500" />
               <span className="font-nunito text-xl text-black font-bold">Instagram</span>
-            </a>
+            </Link>
 
-            <a
+            <Link
               aria-label="Наш ВКонтакте"
               href={contacts.vk}
               target="_blank"
@@ -127,7 +127,7 @@ const ContactsPage = () => {
             >
               <Icon icon="mdi:vk" className="text-2xl text-blue-700" />
               <span className="font-nunito text-xl text-black font-bold">ВКонтакте</span>
-            </a>
+            </Link>
           </div>
         </div>
       </div>

@@ -15,6 +15,7 @@
   --color-dark-blue: #0F2851;
   --color-nav-item: var(--color-gray-500);
   --color-active-nav-item: black;
+   --color-title-add-pet: black;
 }
 
 @theme inline {
@@ -32,6 +33,7 @@
     --foreground: #ededed;
     --color-nav-item: var(--color-gray-400);
     --color-active-nav-item: white;
+    --color-title-add-pet: white;
   }
   form span, label, input,
   select,
@@ -80,4 +82,8 @@ h1, h2, h3, h4, h5, h6, button {
 
 .active-nav-item {
   color: var(--color-active-nav-item);
+}
+
+.title-add-pet{
+  color:  var(--color-title-add-pet);
 }
