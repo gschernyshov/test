@@ -185,7 +185,6 @@ const AddPetForm = () => {
       </RadioGroup>
       <div className="w-full">
         <Slider
-          isRequired
           label="Возраст (в месяцах)"
           color="primary"
           maxValue={120}
