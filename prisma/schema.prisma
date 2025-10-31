@@ -1,0 +1,53 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client"
+  output   = "../app/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(cuid())
+  wallet    String   @unique
+  name      String?
+  posts     Post[]
+  tipsSent  Tip[]    @relation("TipsSent")
+  tipsRecvd Tip[]    @relation("TipsRecvd")
+  createdAt DateTime @default(now()) @map("created_at")
+
+  @@map("users")
+}
+
+model Post {
+  id        String   @id @default(cuid())
+  content   String
+  author    User     @relation(fields: [authorId], references: [id])
+  authorId  String
+  tips      Tip[]
+  createdAt DateTime @default(now()) @map("created_at")
+
+  @@map("posts")
+}
+
+model Tip {
+  id         String   @id @default(cuid())
+  fromUser   User     @relation("TipsSent", fields: [fromUserId], references: [id])
+  fromUserId String
+  toUser     User     @relation("TipsRecvd", fields: [toUserId], references: [id])
+  toUserId   String
+  post       Post     @relation(fields: [postId], references: [id])
+  postId     String
+  amount     Float
+  txHash     String   @unique @map("tx_hash")
+  createdAt  DateTime @default(now()) @map("created_at")
+
+  @@map("tips")
+}
