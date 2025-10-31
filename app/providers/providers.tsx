@@ -9,7 +9,7 @@ interface IProvidersProps {
 export function Providers({ children }: IProvidersProps) {
 
   return (
-    <TonConnectUIProvider manifestUrl="/tonconnect-manifest.json">
+    <TonConnectUIProvider manifestUrl="https://test-three-vert-63.vercel.app/tonconnect-manifest.json">
       {children}
     </TonConnectUIProvider>
   )
