@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import { Providers } from "./providers/providers"
+import { AppLoader } from "./hoc/AppLoader"
 import ConnectButton from "./components/common/ConnectButton"
 import { Geist, Geist_Mono } from "next/font/google"
 import "./globals.css"
@@ -25,13 +26,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ru">
+    <html 
+      lang="ru"
+      className="md:p-5"
+    >
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased md:border-2 md:border-blue-900 md:rounded-4xl`}
       >
         <Providers>
-          {children}
-          <ConnectButton />
+          <AppLoader>
+            {children}
+            <ConnectButton />
+          </AppLoader>
         </Providers>
       </body>
     </html>
