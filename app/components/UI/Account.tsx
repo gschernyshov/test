@@ -16,19 +16,19 @@ const Account = () => {
         <span>Raw address: {rawAddress}</span>
       </div>
     )}
-    {wallet && (
-      <div>
-        <span>Connected wallet address: {wallet.account.address}</span>
-        <span>Device: {wallet.device.appName}</span>
-        <span>Connected via: {wallet.provider}</span>
-        {wallet.connectItems?.tonProof?.proof && <span>Ton proof: {wallet.connectItems.tonProof.proof}</span>}
+{wallet && (
+  <div>
+    <span>Connected wallet address: {wallet.account.address}</span>
+    <span>Device: {wallet.device.appName}</span>
+    <span>Connected via: {wallet.provider}</span>
 
-        <div>Connected wallet info:</div>
-        <div>
-          {wallet.name} <img src={wallet.imageUrl} />
-        </div>
-      </div>
-    )}
+    <div>Connected wallet info:</div>
+    <div>
+      {('name' in wallet) && wallet.name}
+      {('imageUrl' in wallet) && <img src={wallet.imageUrl} alt="Wallet logo" />}
+    </div>
+  </div>
+)}
     </>
   )
 }
