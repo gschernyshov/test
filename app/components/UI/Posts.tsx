@@ -16,7 +16,7 @@ const Posts = () => {
     const loadPosts = async () => {
       try {
         const res = await fetch("/api/posts", { 
-            signal,
+          signal,
         })
         const data = await res.json()
 
@@ -50,6 +50,7 @@ const Posts = () => {
 
     
   if (loading) return <p>Loading posts...</p>
+  
   if (error) return <p className="text-red-500">{error}</p>
 
   return (

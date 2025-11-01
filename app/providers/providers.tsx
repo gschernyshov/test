@@ -1,7 +1,7 @@
 "use client"
 
 import { TonConnectUIProvider } from "@tonconnect/ui-react"
-import {HeroUIProvider} from "@heroui/react";
+import {HeroUIProvider} from "@heroui/react"
 
 interface IProvidersProps {
   children: React.ReactNode

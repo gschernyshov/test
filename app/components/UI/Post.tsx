@@ -3,7 +3,7 @@
 import { TPost } from "@/app/types/Post"
 
 interface IPostProps {
-    post: TPost
+  post: TPost
 }
 
 const Post = ({ post }: IPostProps) => {

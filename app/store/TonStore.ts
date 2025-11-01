@@ -1,6 +1,6 @@
 import { create } from "zustand"
 
-interface TonState {
+interface ITonState {
   address: string | null
   balance: string | null
   walletName: string | null
@@ -11,7 +11,7 @@ interface TonState {
   clearWallet: () => void
 }
 
-export const useTonStore = create<TonState>((set) => ({
+export const useTonStore = create<ITonState>((set) => ({
   isInitialized: false,
   address: null,
   balance: null,

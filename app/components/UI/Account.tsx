@@ -1,7 +1,7 @@
 "use client"
 
 import { TonConnectButton } from '@tonconnect/ui-react'
-import { useTonStore } from '@/app/store/useTonStore'
+import { useTonStore } from '@/app/store/TonStore'
 
 const Account = () => {
   const { isInitialized, address, balance, walletName, walletImage } = useTonStore()
@@ -26,7 +26,7 @@ const Account = () => {
 
       {walletName && walletImage && (
         <div className="flex flex-col items-start gap-1 p-4 shadow rounded-2xl">
-          <h3 className='text-xs'>Информация о кошельке:</h3>
+          <h3 className="text-xs">Информация о кошельке:</h3>
           <div className="flex gap-2 items-center p-1 pr-13 bg-white shadow rounded-md">
             <img 
               className="h-7 w-7 rounded-md"

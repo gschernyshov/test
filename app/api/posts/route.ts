@@ -2,7 +2,7 @@
 
 import { NextResponse } from "next/server"
 import prisma from "@/app/utils/prisma"
-import { PostWithTips } from "@/app/types/Post"
+import { TPostWithTips } from "@/app/types/Post"
 
 export async function GET() {
   try {
@@ -16,7 +16,7 @@ export async function GET() {
       },
     })
 
-    const posts: PostWithTips[] = rawPosts.map((post) => ({
+    const posts: TPostWithTips[] = rawPosts.map((post) => ({
       id: post.id,
       content: post.content,
       author: {
@@ -30,8 +30,6 @@ export async function GET() {
         day: "2-digit",
         month: "long",
         year: "numeric",
-        hour: "2-digit",
-        minute: "2-digit",
       }),
     }))
 
@@ -39,7 +37,8 @@ export async function GET() {
       { 
         success: true, 
         posts,
-      })
+      }
+    )
   } catch (error: unknown) {
     console.error("При загрузке постов возникла ошибка: ", error)
     return NextResponse.json(
@@ -48,7 +47,7 @@ export async function GET() {
         error: "При загрузке постов возникла ошибка",
       }, 
       { 
-        status: 500 
+        status: 500,
       }
     )
   }
